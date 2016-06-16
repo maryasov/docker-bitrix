@@ -13,6 +13,7 @@ RUN \
  sed -i "s/;opcache.revalidate_freq=2/opcache.revalidate_freq=0/" /etc/php5/apache2/php.ini && \
  sed -i "s/;mbstring.func_overload.*$/mbstring.func_overload=2/" /etc/php5/apache2/php.ini && \
  sed -i "s/;mbstring.internal_encoding.*$/mbstring.internal_encoding=UTF-8/" /etc/php5/apache2/php.ini && \
+ sed -i "s/;date.timezone.*$/date.timezone = \"Asia\/Krasnoyarsk\"/" /etc/php5/apache2/php.ini && \
  sed -i "s/;realpath_cache_size.*$/realpath_cache_size=8M/" /etc/php5/apache2/php.ini
 
 ENV APACHE_RUN_USER www-data
